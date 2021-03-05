@@ -30,7 +30,7 @@ public class Controller
         CalculusEspresso ce = new CalculusEspresso(equation);
         HashMap variableMap = new HashMap();
 
-        int N = 1000;
+        int N = 10000;
         double delX_pixels = canvas.getWidth() / N;
         Color lineColor = Color.RED;
         PixelWriter pixelWriter = gc.getPixelWriter();
