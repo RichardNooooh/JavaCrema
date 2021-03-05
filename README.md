@@ -1,0 +1,5 @@
+# JavaCrema - A Graphing Calculator Using JavaEspresso (PROTOTYPE)
+[Parabola](docs/parabola graph.png)
+[Sinusoidal](docs/sinusoidal graph.png)
+[Tangent](docs/tangent graph.png)
+[Complex Example](docs/weird graph.png)
