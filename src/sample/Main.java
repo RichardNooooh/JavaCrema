@@ -25,13 +25,13 @@ public class Main extends Application {
         GraphicsContext gc = graphingCanvas.getGraphicsContext2D();
         //background
         gc.setFill(Color.LIGHTYELLOW);
-        gc.fillRect(0, 0, 1024, 730);
+        gc.fillRect(0, 0, graphingCanvas.getWidth(), graphingCanvas.getHeight());
         //grid lines
-        int centerGraphX = 1024 / 2;
-        int centerGraphY = 730 / 2;
+        int centerGraphX = (int)graphingCanvas.getWidth() / 2;
+        int centerGraphY = (int)graphingCanvas.getHeight() / 2;
         gc.setStroke(Color.BLACK);
-        gc.strokeLine(centerGraphX, 0, centerGraphX, 730);
-        gc.strokeLine(0, centerGraphY, 1024, centerGraphY);
+        gc.strokeLine(centerGraphX, 0, centerGraphX, graphingCanvas.getHeight());
+        gc.strokeLine(0, centerGraphY, graphingCanvas.getWidth(), centerGraphY);
 
         Label equationLabel = new Label("Equation: ");
         equationLabel.setTranslateY(730);
@@ -45,7 +45,7 @@ public class Main extends Application {
         graphButton.setTranslateY(730);
 
         graphButton.setOnAction( e -> {
-            Controller.DoThing();
+            Controller.drawFunction(gc, graphingCanvas, equationField.getText());
         });
 
         root.getChildren().addAll(equationLabel, equationField, graphButton, graphingCanvas);
